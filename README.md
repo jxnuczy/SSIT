@@ -16,3 +16,7 @@ model’s capability to model spatial-spectral characteristics. Extensive experi
 effectiveness of the proposed method.
 
 <hr />
+
+## Network Architecture
+
+<img src = ""> 
