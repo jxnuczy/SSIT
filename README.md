@@ -78,3 +78,8 @@ python hside_real.py -a sert_real -p sert_real
 
 #----testing---- The results are shown in Table 3 in the main paper.
 python hside_real_test.py -a sert_real -p sert_real_test -r -rp ./checkpoints/real_realistic.pth
+
+
+## Acknowledgement
+The codes are based on [SERT](https://github.com/MyuLi/SERT).
+
