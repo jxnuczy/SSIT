@@ -19,4 +19,62 @@ effectiveness of the proposed method.
 
 ## Network Architecture
 
-[imgae](https://github.com/jxnuczy/SSIT/blob/main/img/SSIT_Model.png)
+<img width="8828" height="6460" alt="SSIT_Model" src="https://github.com/user-attachments/assets/68070f95-f3e1-4e5c-80e2-56f12cb86db5" />
+
+
+
+## Contents
+1. [Datasets](#Datasets)
+1. [Training and Testing](#Training)
+1. [Results](#Results)
+
+
+## Datasets
+
+### ICVL 
+* The entire ICVL dataset download link: https://icvl.cs.bgu.ac.il/hyperspectral/
+
+### Realistic Dataset
+* Please refer to [[github-link]](https://github.com/ColinTaoZhang/HSIDwRD) for "Hyperspectral Image Denoising with Realistic Data in ICCV, 2021" to download the dataset
+
+### Urban dataset
+* The training dataset are from link: https://apex-esa.org/. The origin Urban dataset are from link:  https://rslab.ut.ac.ir/data.
+
+### Houston dataset
+
+## Training and Testing
+### ICVL Dataset
+```
+#for gaussian noise
+#----training----
+python hside_simu.py -a sert_base -p sert_base_gaussian
+
+#----testing---- The results are shown in Table 1 in the main paper.
+python hside_simu_test.py -a sert_base -p sert_base_gaussian_test -r -rp checkpoints/icvl_gaussian.pth --test-dir /icvl_noise/512_50
+```
+
+```
+#for comlpex noise
+#----training----
+python hside_simu_complex.py -a sert_base -p sert_base_complex
+
+#----testing---- The results are shown in Table 2 in the main paper.
+python hside_simu_test.py -a sert_base -p sert_base_complex_test -r -rp checkpoints/icvl_complex.pth --test-dir  /icvl_noise/512_mix
+```
+
+### Urban Dataset
+```
+#----training----
+python hside_urban.py -a sert_urban -p sert_urban 
+
+#----testing----  The results are shown in Figure 4 in the main paper.
+python hside_urban_test.py -a sert_urban -p sert_urban_test -r -rp ./checkpoints/real_urban.pth
+```
+
+### Realistic Dataset
+```
+#----training----
+python hside_real.py -a sert_real -p sert_real
+
+#----testing---- The results are shown in Table 3 in the main paper.
+python hside_real_test.py -a sert_real -p sert_real_test -r -rp ./checkpoints/real_realistic.pth
