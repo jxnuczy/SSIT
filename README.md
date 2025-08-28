@@ -81,5 +81,5 @@ python hside_real_test.py -a sert_real -p sert_real_test -r -rp ./checkpoints/re
 
 
 ## Acknowledgement
-The codes are based on [SERT](https://github.com/MyuLi/SERT).
+The codes are based on SERT, link: https://github.com/MyuLi/SERT.
 
