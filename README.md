@@ -19,4 +19,4 @@ effectiveness of the proposed method.
 
 ## Network Architecture
 
-！[image](https://github.com/jxnuczy/SSIT/blob/main/img/SSIT_Model%20(1).pdf)
+[imgae](https://github.com/jxnuczy/SSIT/blob/main/img/SSIT_Model.png)
