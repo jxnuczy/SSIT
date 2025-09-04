@@ -54,39 +54,6 @@ python hside_simu.py -a ssit_base -p ssit_base_gaussian
 python hside_simu_test.py -a ssit_base -p ssit_base_gaussian_test -r -rp checkpoints/icvl_gaussian.pth --test-dir /icvl_noise/512_50
 ```
 
-```
-#for comlpex noise
-#----training----
-python hside_simu_complex.py -a ssit_base -p ssit_base_complex
-
-#----testing---- 
-python hside_simu_test.py -a ssit_base -p ssit_base_complex_test -r -rp checkpoints/icvl_complex.pth --test-dir  /icvl_noise/512_mix
-```
-
-### Realistic Dataset
-```
-#----training----
-python hside_real.py -a ssit_real -p ssit_real
-
-#----testing---- 
-python hside_real_test.py -a ssit_real -p ssit_real_test -r -rp ./checkpoints/real_realistic.pth
-### Realistic Dataset
-```
-
-### Urban Dataset
-```
-#----training----
-python hside_urban.py -a ssit_urban -p ssit_urban 
-
-#----testing---- 
-python hside_urban_test.py -a ssit_urban -p ssit_urban_test -r -rp ./checkpoints/real_urban.pth
-```
-
-### Houston2018 dataset
-
-
-
-
 ## Acknowledgement
 The codes are based on [SERT](https://github.com/MyuLi/SERT).
 
